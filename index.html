@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="./output.css" rel="stylesheet">
+<title>Cartova — Everyday Finds</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body class="min-h-screen">
+<header class="sticky top-0 z-1000  bg-[#FAF8F3]/90 border-b drop-shadow-xl">
+    <div class="mx-auto px-5 py-4 flex items-center justify-around ">
+        <a href="" class="flex items-center gap-2 shrink-0">
+            <span class="w-9 h-9 rounded-full bg-[#d47cb3cc] flex items-center justify-center text-white font-bold text-lg">C</span>
+            <span  class="font-display font-semibold text-xl tracking-tight">Cartova</span>
+        </a>
+        <div class="hidden sm:flex items-center gap-2 flex-1 max-w-md">
+            <div class="relative w-full">
+                <input id="search-input" type="text" placeholder="Search products…"
+                class="w-full border border-[#E4DFD3] bg-white rounded-full py-2 pl-4 pr-10 text-sm " />
+            </div>
+        </div>
+        <nav class="flex items-center gap-5 text-sm font-medium">
+            <a href="#" class="hover:text-[#4d1f3f]">Home</a>
+            <a href="#categories-section"  class="hidden sm:inline hover:text-[#4d1f3f]">Categories</a>
+        </nav>
+    </div>
+</header>
+
+<main view-home class="view active">
+
+    <section hero class="max-w-6xl mx-auto px-5 pt-14 pb-10 grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
+        <div>
+            <p class="font-mono text-xs uppercase  mb-4">The everyday marketplace</p>
+            <h1 class="font-display text-5xl sm:text-6xl leading-[1.05] font-semibold mb-5">
+            Good things,<br/>
+            <span class="italic font-medium ">plainly</span> priced.
+            </h1>
+            <p class=" max-w-md mb-7 leading-relaxed">
+                Browse real inventory across phones, fragrances, groceries and more — just good things for good people.
+            </p>
+        </div>
+        <div class="relative">
+            <div class="absolute  border  rounded-3xl -z-10"></div>
+            <div id="hero-thumbs" class="grid grid-cols-2 gap-3">
+            </div>
+        </div>
+    </section>
+
+  <section id="categories-section" class="max-w-6xl mx-auto px-5 py-8">
+    <div class="flex items-baseline justify-between mb-5">
+      <h2 class="font-display text-2xl font-semibold">Shop by category</h2>
+      <span class="font-mono text-xs " id="cat-count"></span>
+    </div>
+    <div id="categories-wrap" class="flex flex-wrap gap-2.5">
+    </div>
+  </section>
+
+
+</main>
+
+
+
+<footer class="border-t py-8">
+  <div class="max-w-6xl mx-auto px-5 text-xs font-mono flex justify-between">
+    <span>Cartova — test dummy data </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
