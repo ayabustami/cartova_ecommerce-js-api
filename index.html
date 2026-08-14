@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="./src/css/output.css" rel="stylesheet">
 <title>Cartova — Everyday Finds</title>
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/css/main.css">
@@ -30,7 +29,7 @@
     </div>
 </header>
 
-<main view-home class="view active">
+<main view-home class="v">
 
     <section hero class="max-w-6xl mx-auto px-5 pt-14 pb-10 grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
         <div>
@@ -44,20 +43,28 @@
             </p>
         </div>
         <div class="relative">
-            <div class="absolute  border  rounded-3xl -z-10"></div>
-            <div id="hero-thumbs" class="grid grid-cols-2 gap-3">
+            <div class="absolute  border  rounded-3xl z-10"></div>
+            <div hero-imgs class="grid grid-cols-2 gap-3">
             </div>
         </div>
     </section>
 
-  <section id="categories-section" class="max-w-6xl mx-auto px-5 py-8">
-    <div class="flex items-baseline justify-between mb-5">
-      <h2 class="font-display text-2xl font-semibold">Shop by category</h2>
-      <span class="font-mono text-xs " id="cat-count"></span>
-    </div>
-    <div id="categories-wrap" class="flex flex-wrap gap-2.5">
-    </div>
-  </section>
+    <section categories-section class="max-w-6xl mx-auto px-5 py-8">
+        <div class="flex items-baseline justify-between mb-5">
+        <h2 class="font-display text-2xl font-semibold">Shop by category</h2>
+        <span cat-count class="font-mono text-xs " ></span>
+        </div>
+        <div categories-wrap class="flex flex-wrap gap-2.5">
+        </div>
+    </section>
+
+    <section products-section class="max-w-6xl mx-auto px-5 py-8 pb-20">
+        <div class="flex items-baseline justify-between mb-5">
+            <h2 class="font-display text-2xl font-semibold">Featured products</h2>
+        </div>
+        <div products-grid class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        </div>
+    </section>
 
 
 </main>
@@ -65,12 +72,17 @@
 
 
 <footer class="border-t py-8">
-  <div class="max-w-6xl mx-auto px-5 text-xs font-mono flex justify-between">
-    <span>Cartova — test dummy data </span>
-  </div>
+    <div class="max-w-6xl mx-auto px-5 text-xs font-mono flex justify-between">
+        <span>Cartova — test dummy data </span>
+    </div>
 </footer>
+<div product-detail-popup class="hidden fixed  bg-black/50 z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 relative">
+        <button close-Details class="absolute top-4 right-4 text-xl">X</button>
+        <div product-detail></div>
+    </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./main.js"  type="module"></script>
+<script type="module" src="./main.js"></script>
 </body>
 </html>
