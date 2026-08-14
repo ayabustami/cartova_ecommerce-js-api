@@ -31,6 +31,19 @@ const showCategories = async () => {
 
       const category = link.getAttribute("category");
 
+      categoryLinks.forEach((link) => {
+            link.classList.remove("border-pink-100");
+            link.classList.remove("bg-pink-50");
+            link.classList.add("border-gray-200");
+            link.classList.add("bg-white");
+      });
+
+      link.classList.add("border-pink-100");
+      link.classList.add("bg-pink-50");
+      link.classList.remove("border-gray-200");
+      link.classList.remove("bg-white");
+      
+
       showProducts(category);
     });
   });
@@ -56,6 +69,7 @@ const getProducts = async (category) => {
 
 const showProducts = async (category) => {
   const products = await getProducts(category);
+  
 
   const html = products.map((p) => {
     return `
