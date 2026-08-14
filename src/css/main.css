@@ -1,0 +1,9 @@
+.hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, .6) 80%), url("../img/heroImg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+} 
+
+
